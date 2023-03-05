@@ -13,7 +13,6 @@
   }
   .header {
     padding: 24px 0;
-    border-bottom: 1px solid #e7e9fc;
   }
   .container-header {
     display: flex;
@@ -81,6 +80,17 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-main {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/main-img2x.jpg");
+    }
+  }
   .main-tex {
     margin-bottom: 48px;
   }
@@ -114,7 +124,7 @@
     margin-bottom: 8px;
   }
   .info-list {
-    align-items: baseline;
+    /* align-items: baseline; */
   }
   /* --------What are we doing--------- */
   .work-section {
@@ -141,9 +151,7 @@
     padding-bottom: 120px;
   }
   .team-list {
-    display: flex;
     gap: 24px;
-    align-items: center;
   }
 
   /* -------customers---------- */
@@ -152,18 +160,15 @@
     padding-bottom: 120px;
   }
   .company-list {
-    display: flex;
     gap: 24px;
     flex-wrap: nowrap;
   }
   .company-item {
     width: calc((100%-168px) / 6);
     height: 88px;
-    width: 168;
   }
   /* ------footer------ */
   .footer {
-    background-color: #2e2f42;
     padding-top: 100px;
     padding-bottom: 100px;
   }
@@ -192,8 +197,6 @@
     margin-bottom: 72px;
     display: flex;
     justify-content: center;
-    gap: 24px;
-    flex-wrap: nowrap;
   }
   /* ------portfolio-info------ */
   .portfolio-info-list {
@@ -201,5 +204,7 @@
   }
   .modal {
     padding: 24px;
+    width: 408px;
+    height: 584px;
   }
 }

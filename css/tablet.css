@@ -8,13 +8,12 @@
     max-width: 766px;
     margin: 0 auto;
     padding: 0 15px;
-    outline: 2px solid tomato;
+    /* outline: 2px solid tomato; */
   }
   /* Header */
   .header {
     padding-top: 24px;
     padding-bottom: 9px;
-    border-bottom: 1px solid #e7e9fc;
   }
 
   .container-header {
@@ -31,7 +30,6 @@
   }
   .logo {
     margin-right: 120px;
-    margin-left: 16px;
     padding: 0;
   }
   .address-list {
@@ -81,30 +79,27 @@
   /* Section main */
 
   .section-main {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #2e2f42;
-    box-sizing: border-box;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url("../images/main-img-tablet.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* width: 768px; */
     padding-top: 112px;
     padding-bottom: 108px;
   }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-main {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/main-img-tablet2x.jpg");
+    }
+  }
 
   .main-tex {
-    color: var(--color-fone);
-    margin: 0 auto;
-    letter-spacing: 0.02em;
-    line-height: 1.1;
-    text-align: center;
-    text-transform: capitalize;
     margin-bottom: 40px;
     font-weight: 700;
     font-size: 56px;
@@ -112,9 +107,6 @@
   }
   .container-text {
     max-width: 494px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
   }
   .work-section {
     display: none;
@@ -124,7 +116,6 @@
     max-width: 356px;
   }
   .info-list {
-    display: flex;
     gap: 72px 24px;
     flex-wrap: wrap;
     flex-direction: inherit;
@@ -132,38 +123,25 @@
 
   /* -----team-section------ */
   .team-list {
-    display: flex;
     gap: 64px 24px;
     flex-wrap: wrap;
-    align-items: center;
     flex-direction: inherit;
-  }
-  .team-item {
-    width: 264px;
-  }
-  .team-section {
-    padding-bottom: 96px;
   }
 
   /* ----castomers----- */
   .company-item {
-    height: 88px;
     width: 168px;
   }
   .company-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 72px 24px;
   }
   /* -----portfolio---- */
 
   .portfolio-list-button {
-    display: flex;
     justify-content: center;
-    gap: 24px;
     margin-bottom: 64px;
     margin-top: 64px;
+    flex-wrap: nowrap;
   }
   .portfolio {
     padding-bottom: 96px;
@@ -203,5 +181,7 @@
   /* -----modal------ */
   .modal {
     padding: 24px;
+    width: 408px;
+    height: 584px;
   }
 }

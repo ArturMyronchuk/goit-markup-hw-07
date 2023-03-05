@@ -69,7 +69,7 @@ address {
   /* max-width: 1158px; */
   margin: 0 auto;
   /* padding: 0 15px; */
-  outline: 2px solid green;
+  /* outline: 2px solid green; */
   box-sizing: border-box;
   max-width: 276px;
 }
@@ -79,17 +79,9 @@ address {
   padding: 24px 0;
   border-bottom: 1px solid #e7e9fc;
 }
-/* .container-header {
-  display: flex;
-  text-align: center;
-} */
-/* .nav {
-  display: flex;
-} */
-.header-list {
-  /* display: flex;
-  gap: 40px;
-  position: relative; */
+
+.header-list,
+.container-header {
   display: none;
 }
 
@@ -125,47 +117,15 @@ address {
   color: var(--color-hover);
 }
 .address {
-  /* display: flex;
-  margin-left: auto; */
   display: none;
 }
-/* .address-list {
-  display: flex;
-  gap: 40px;
-}
-.address-info,
-.phone {
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--title-tex-color);
-  transition: var(--transition-focus);
-} */
-/* ------Підкреслення сторінки------ */
-.nav-linear::after {
-  content: "";
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 4px;
-  bottom: -25px;
-  background: #404bbf;
-  border-radius: 2px;
-  z-index: 1;
-}
-.current {
+.current-mobi {
   color: #404bbf;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 }
+/* ------Підкреслення сторінки------ */
 
 /* --------mob menu-------- */
-.logo {
-  margin-left: 24px;
-}
+
 .mob-menu > .container {
   height: 100%;
   display: flex;
@@ -198,6 +158,9 @@ address {
 .is-open.mob-menu {
   transform: scaleX(1);
 }
+.no-scroll {
+  overflow: hidden;
+}
 
 .mob-menu.is-open {
   opacity: 1;
@@ -207,7 +170,6 @@ address {
 .menu-open {
   display: block;
   margin-left: auto;
-  margin-right: 15px;
   background-color: transparent;
   border: none;
   padding: 0;
@@ -226,6 +188,7 @@ address {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: #e7e9fc;
+  line-height: 0;
   transition: background-color var(--transition-focus),
     fill var(--transition-focus);
 }
@@ -245,6 +208,9 @@ address {
   text-transform: capitalize;
   color: var(--primary-tex-color);
   transition: color var(--transition-focus);
+}
+.current-mobi {
+  color: #404bbf;
 }
 .menu-item:focus,
 .menu-item:hover {
@@ -309,7 +275,6 @@ address {
 /* Section main */
 
 .section-main {
-  /* width: 1440px; */
   margin-left: auto;
   margin-right: auto;
   background-color: #2e2f42;
@@ -328,8 +293,18 @@ address {
   padding-top: 85px;
   padding-bottom: 85px;
 }
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/main-img-phone2x.jpg");
+  }
+}
 .container-text {
-  /* width: 496px; */
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -373,7 +348,6 @@ address {
 }
 .info-list {
   display: flex;
-  /* gap: 24px; */
   flex-direction: column;
   gap: 72px;
   align-items: center;
@@ -691,7 +665,6 @@ address {
   display: flex;
   /* justify-content: center; */
   gap: 24px;
-
   margin-bottom: 48px;
   flex-wrap: wrap;
 }
@@ -813,7 +786,7 @@ address {
   top: 50%;
   left: 50%;
   width: 100%;
-  max-height: 584px;
+  /* max-height: 584px; */
   /* padding: 24px; */
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
